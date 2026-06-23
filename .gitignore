@@ -1,0 +1,28 @@
+# Build output
+build/
+out/
+*.class
+*.jar
+
+# Gradle
+.gradle/
+gradle-app.setting
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+*.eclipse
+
+# macOS
+.DS_Store
+
+# High scores (generated at runtime — do not commit)
+assets/data/highscores.txt
+
+# Log files
+*.log
