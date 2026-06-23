@@ -1,0 +1,25 @@
+apply plugin: 'java-library'
+apply plugin: 'application'
+
+mainClassName = 'com.snakegame.desktop.DesktopLauncher'
+
+sourceSets.main.resources.srcDirs = [rootProject.file('assets').path]
+
+dependencies {
+    implementation project(':core')
+    api "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+}
+
+run {
+    workingDir = rootProject.file('assets')
+}
+
+jar {
+    archiveFileName = 'SnakeGame.jar'
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
