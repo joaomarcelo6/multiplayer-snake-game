@@ -1,28 +1,51 @@
-# Build output
-build/
-out/
-*.class
-*.jar
-
-# Gradle
+o gemini me fez esse agr, mas n sei se funciona
+# =========================
+# Build e Dependências do Gradle
+# =========================
 .gradle/
-gradle-app.setting
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
 
-# IDEs
+# =========================
+# Compilados do Java
+# =========================
+*.class
+*.log
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+*.code-workspace
+
+# =========================
+# Outras IDEs
+# =========================
+# IntelliJ IDEA
 .idea/
 *.iml
-*.ipr
 *.iws
-.project
+out/
+
+# Eclipse
 .classpath
+.project
 .settings/
-*.eclipse
+bin/
 
-# macOS
+# =========================
+# Arquivos de Sistema Operacional
+# =========================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux (Ubuntu) e macOS
 .DS_Store
-
-# High scores (generated at runtime — do not commit)
-assets/data/highscores.txt
-
-# Log files
-*.log
+.AppleDouble
+.LSOverride
+*~
