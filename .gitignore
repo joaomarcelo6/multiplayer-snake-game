@@ -1,51 +1,28 @@
-o gemini me fez esse agr, mas n sei se funciona
-# =========================
-# Build e Dependências do Gradle
-# =========================
-.gradle/
+# Build outputs
 build/
-**/build/
-!gradle/wrapper/gradle-wrapper.jar
-
-# =========================
-# Compilados do Java
-# =========================
+out/
 *.class
-*.log
 *.jar
 !gradle/wrapper/gradle-wrapper.jar
 
-# =========================
-# VS Code
-# =========================
+# Gradle
+.gradle/
+local.properties
+
+# IDEs
+.idea/
+*.iml
+.eclipse/
+.settings/
+.classpath
+.project
 .vscode/
 *.code-workspace
 
-# =========================
-# Outras IDEs
-# =========================
-# IntelliJ IDEA
-.idea/
-*.iml
-*.iws
-out/
+# High scores gerado em runtime (não versionar)
+highscores.txt
 
-# Eclipse
-.classpath
-.project
-.settings/
-bin/
-
-# =========================
-# Arquivos de Sistema Operacional
-# =========================
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Linux (Ubuntu) e macOS
+# OS
 .DS_Store
-.AppleDouble
-.LSOverride
-*~
+Thumbs.db
+Desktop.ini
